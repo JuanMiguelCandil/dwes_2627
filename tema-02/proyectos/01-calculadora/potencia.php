@@ -22,10 +22,10 @@
 $valor1 = (float) $_POST['valor1'];
 $valor2 = (float) $_POST['valor2'];
 
-// Realizar la operación de suma
-$resultado = $valor1 + $valor2;
+// Realizar la operación de potencia
+$resultado = pow($valor1, $valor2);
 
-$operacion = 'Suma';
+$operacion = 'Potencia';
 
 // Vista
 include 'views/resultado.view.php';

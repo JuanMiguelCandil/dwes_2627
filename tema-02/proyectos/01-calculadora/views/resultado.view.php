@@ -26,25 +26,25 @@
         <main>
             <div class="content">
                 <!-- Formulario de la calculadora -->
-                <form method="post">
+                <form>
                     <!-- Campo valor 1 -->
                     <div class="mb-3">
                         <label for="valor1" class="form-label">Valor 1:</label>
-                        <input type="number" class="form-control" step="0.01" placeholder="0.00" id="valor1" name="valor1" required>
+                        <input type="number" class="form-control" step="0.01" value="<?= $valor1 ?>" readonly>
                     </div>
                     <!-- Campo valor 2 -->
                     <div class="mb-3">
                         <label for="valor2" class="form-label">Valor 2:</label>
-                        <input type="number" class="form-control" step="0.01" placeholder="0.00" id="valor2" name="valor2" required>
+                        <input type="number" class="form-control" step="0.01" value="<?= $valor2 ?>" readonly>
+                    </div>
+                    <!-- Campo resultado -->
+                    <div class="mb-3">
+                        <label for="resultado" class="form-label"><?= $operacion ?>:</label>
+                        <input type="number" class="form-control" step="0.01" value="<?= $resultado ?>" readonly>
                     </div>
                     <!-- Botones de acción -->
                      <div class="btn-group" role="group">
-                        <button type="reset" class="btn btn-danger">Borrar</button>
-                        <button type="submit" class="btn btn-warning" name="operacion" value="sumar" formaction="sumar.php">Sumar</button>
-                        <button type="submit" class="btn btn-warning" name="operacion" value="restar" formaction="restar.php">Restar</button>
-                        <button type="submit" class="btn btn-warning" name="operacion" value="multiplicar" formaction="multiplicar.php">Multiplicar</button>
-                        <button type="submit" class="btn btn-warning" name="operacion" value="dividir" formaction="dividir.php">Dividir</button>
-                        <button type="submit" class="btn btn-warning" name="operacion" value="potencia" formaction="potencia.php">Potencia</button>
+                        <a class="btn btn-warning" href="index.php">Nuevo Cálculo</a>
                     </div>
                 </form>
             </div>
