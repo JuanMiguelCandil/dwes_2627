@@ -1,5 +1,16 @@
 <?php
 
+/*
+    actividad 2.2.1
+    Descripción: estado de las variables
+        - conversiones de datos en expresiones
+        - funcion is_null()
+        - funcion isset()
+        - funcion empty()
+    Alumno: Juan Miguel Candil Pacheco
+    Fecha: 07/10/2026
+*/
+
 $valor_entero = 4;
 $cadena = "4Hola Mundo";
 $valor_float = 4.5;
