@@ -59,9 +59,13 @@ function get_libros() {
 
 // Función para obtener el id del nuevo libro creado.
 function obtener_id_nuevo_libro($libros) {
-    $ultimo_libro = end($libros);
+    if (empty($libros)) {
+        return 1;
+    }
+    
+    // Obtenemos la última clave del array de forma segura sin alterar punteros
+    $ultima_clave = array_key_last($libros);
+    $ultimo_libro = $libros[$ultima_clave];
 
-    $ultimo_id = $ultimo_libro['id'];
-
-    return $ultimo_id++;
+    return $ultimo_libro['id'] + 1;
 }

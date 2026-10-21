@@ -31,9 +31,7 @@ $titulo = htmlspecialchars($_POST['titulo'] ?? '');
 $autor = htmlspecialchars($_POST['autor'] ?? '');
 $editorial = htmlspecialchars($_POST['editorial'] ?? '');
 $generos = htmlspecialchars($_POST['generos'] ?? '');
-$precio = htmlspecialchars($_POST['precio'] ?? '');
-
-// Proceso de validación de los datos del formulario
+$precio = htmlspecialchars($_POST['precio'] ?? 0);
 
 // Obtener id del nuevo libro creado
 $nuevo_libro_id = obtener_id_nuevo_libro($libros);
@@ -45,7 +43,7 @@ $nuevo_libro = [
     'autor' => $autor,
     'editorial' => $editorial,
     'generos' => explode(', ', $generos),
-    'precio' => $precio
+    'precio' => (float)$precio
 ];
 
 $libros[] = $nuevo_libro;

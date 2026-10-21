@@ -85,7 +85,7 @@
                             <th scope="col">Título</th>
                             <th scope="col">Autor</th>
                             <th scope="col">Editorial</th>
-                            <th scope="col">Género</th>
+                            <th scope="col">Géneros</th>
                             <th scope="col" class="text-end">Precio</th>
                         </tr>
                     </thead>
