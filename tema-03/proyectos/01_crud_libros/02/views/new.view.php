@@ -50,6 +50,10 @@
                         <input type="text" class="form-control" id="categoria" name="categoria" required>
                     </div>
                     <div class="mb-3">
+                        <label for="exampleFormControlInput" class="form-label mb-2">Generos</label>
+                        <input type="text" class="form-control" id="generos" name="generos" required>
+                    </div>
+                    <div class="mb-3">
                         <label for="exampleFormControlInput" class="form-label mb-2">Precio</label>
                         <input type="number" class="form-control" step="0.01" id="precio" name="precio" required>
                     </div>

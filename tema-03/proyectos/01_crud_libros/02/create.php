@@ -44,7 +44,7 @@ $nuevo_libro = [
     'titulo' => $titulo,
     'autor' => $autor,
     'editorial' => $editorial,
-    'generos' => explode(', ',$generos),
+    'generos' => explode(', ', $generos),
     'precio' => $precio
 ];
 
