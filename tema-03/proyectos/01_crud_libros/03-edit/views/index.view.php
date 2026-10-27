@@ -12,7 +12,6 @@
 
     <!-- icons bootstrap 1.13.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
-
 </head>
 
 <body>
@@ -24,6 +23,7 @@
             <i class="bi bi-stack"></i>
             <span class="fs-6">Proyecto 3.1 - CRUD Libros</span>
         </header>
+
         <!-- Menú principal de la aplicación -->
         <nav class="navbar md:navbar-expand bg-1">
             <div class="container-fluid">
@@ -85,56 +85,59 @@
                             <th scope="col">Título</th>
                             <th scope="col">Autor</th>
                             <th scope="col">Editorial</th>
-                            <th scope="col">Géneros</th>
+                            <th scope="col">Género</th>
                             <th scope="col" class="text-end">Precio</th>
-                            <th scope="col">Acciones</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($libros as $indice => $libro): ?>
                             <tr>
-                                <th scope="row" class="text-end"><?= $libro['id'] ?></th>
-                                <td><?= $libro['titulo'] ?></td>
-                                <td><?= $libro['autor'] ?></td>
-                                <td><?= $libro['editorial'] ?></td>
-                                <td><?= implode(', ', $libro['generos']) ?></td>
-                                <td class="text-end"><?= number_format($libro['precio'], 2, ',', '.') ?> €</td>
-                                <!-- Botones de acción -->
-                                <td>
-                                    <!-- Editar -->
-                                    <!-- Al controlador edit le estoy pasando mediante el método get el parámetro índice, que me va a indicar el índice del libro que voy a editar -->
+                                <th scope="row" class="text-end"><?= $libro['id']  ?></th>
+                                <td><?= $libro['titulo']  ?></td>
+                                <td><?= $libro['autor']  ?></td>
+                                <td><?= implode(', ', $libro['generos'])  ?></td>
+                                <td><?= $libro['editorial']  ?></td>
+                                <td class="text-end"><?= number_format($libro['precio'], 2, ',', '.')  ?> €</td>
+                                <!-- botones de acción -->
+                                <td> 
+                                    <!-- boton editar -->
                                     <a href="edit.php?indice=<?= $indice ?>" class="btn btn-outline-primary btn-sm" title="Editar">
                                         <i class="bi bi-pencil"></i>
-                                    </a>
-                                    <!-- Eliminar -->
+                                    </a> 
+                                    <!-- eliminar -->
                                     <i class="bi bi-trash3"></i>
-                                    <!-- Mostrar -->
-                                    <i class="bi bi-eye"></i>
+                                    <!-- mostrar -->
+                                    <i class="bi bi-eye"></i>    
                                 </td>
+                                
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
                     <tfoot>
                         <tr>
                             <td colspan="6" class="text-end">Total</td>
-                            <td class="text-end"><?= count($libros) ?></td>
+                            <td class="text-end"><?= count($libros)  ?></td>
                         </tr>
                     </tfoot>
                 </table>
+
             </div>
+
         </main>
 
         <!-- pie de página de la aplicación -->
         <footer class="footer mt-auto py-3 fixed-bottom bg-light">
             <div class="container">
-                <span class="text-muted">
-                    &copy; 2026 - Juan Miguel Candil Pacheco - DWES - 2º DAW - Curso 26/27
+                <span class="text-muted">&copy; 2026
+                    Juan Carlos Moreno - DWES - 2º DAW - Curso 26/27
                 </span>
             </div>
         </footer>
 
-        <!-- js bootstrap 6.0 -->
+        <!-- js bootstrap básico 6.0 -->
         <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+
     </div>
 </body>
 

@@ -12,7 +12,6 @@
 
     <!-- icons bootstrap 1.13.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
-
 </head>
 
 <body>
@@ -24,6 +23,7 @@
             <i class="bi bi-stack"></i>
             <span class="fs-6">Proyecto 3.1 - CRUD Libros</span>
         </header>
+        
 
         <!-- contenido principal de la aplicación -->
         <main>
@@ -31,50 +31,48 @@
 
                 <legend>Formulario Editar Libro</legend>
 
-                <!-- formulario editar libro -->
-                <form action="update.php" method="post">
+                <!-- formulario nuevo libro -->
+                <form action="update.php?indice=<?= $indice ?>" method="post">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput" class="form-label mb-2">Título</label>
-                        <input type="text" class="form-control" id="titulo" name="titulo" value="<?= $libro['titulo'] ?>" required>
+                        <label for="titulo" class="form-label">Título:</label>
+                        <input type="text" class="form-control" id="titulo" name="titulo" value="<?=  $libro['titulo'] ?>" required>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput" class="form-label mb-2">Autor</label>
-                        <input type="text" class="form-control" id="autor" name="autor" value="<?= $libro['autor'] ?>" required>
+                        <label for="autor" class="form-label">Autor:</label>
+                        <input type="text" class="form-control" id="autor" name="autor" value="<?=  $libro['autor'] ?>" required>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput" class="form-label mb-2">Editorial</label>
-                        <input type="text" class="form-control" id="editorial" name="editorial" value="<?= $libro['editorial'] ?>" required>
+                        <label for="editorial" class="form-label">Editorial:</label>
+                        <input type="text" class="form-control" id="editorial" name="editorial" value="<?=  $libro['editorial'] ?>" required>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput" class="form-label mb-2">Generos</label>
-                        <input type="text" class="form-control" id="generos" name="generos" value="<?= implode(', ', $libro['generos']) ?>" required>
+                        <label for="generos" class="form-label">Géneros:</label>
+                        <input type="text" class="form-control" id="generos" name="generos" value="<?=  implode(', ', $libro['generos']) ?>" required>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput" class="form-label mb-2">Precio</label>
-                        <input type="number" class="form-control" step="0.01" id="precio" name="precio" value="<?= $libro['precio'] ?>" required>
+                        <label for="precio" class="form-label">Precio:</label>
+                        <input type="number" step="0.01" class="form-control" id="precio" name="precio" value="<?=  $libro['precio'] ?>" required>
                     </div>
-                    <div class="mb-3">
-                        <a class="btn-solid theme-danger" href="index.php" role="button">Cancelar</a>
-                        <button type="reset" class="btn-solid theme-warning">Borrar</button>
-                        <button type="submit" class="btn-solid theme-primary">Actualizar Libro</button>
-                    </div>
+                    <a class="btn-solid theme-danger" href="index.php" role="button">Cancelar</a>
+                    <button type="reset" class="btn-solid theme-warning">Borrar</button>
+                    <button type="submit" class="btn-solid theme-primary">Actualizar Libro</button>
                 </form>
-
-
             </div>
+
         </main>
 
         <!-- pie de página de la aplicación -->
         <footer class="footer mt-auto py-3 fixed-bottom bg-light">
             <div class="container">
-                <span class="text-muted">
-                    &copy; 2026 - Juan Miguel Candil Pacheco - DWES - 2º DAW - Curso 26/27
+                <span class="text-muted">&copy; 2026
+                    Juan Carlos Moreno - DWES - 2º DAW - Curso 26/27
                 </span>
             </div>
         </footer>
 
-        <!-- js bootstrap 6.0 -->
+        <!-- js bootstrap básico 6.0 -->
         <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+
     </div>
 </body>
 
