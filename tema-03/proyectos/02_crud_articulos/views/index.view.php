@@ -45,7 +45,7 @@
                     </div>
                 </div>
 
-                <form class="d-flex" role="search" action="search.php" method="GET">
+                <form class="d-flex" role="search" action="filter.php" method="GET">
                     <input class="form-control me-2" type="search" name="q" placeholder="" aria-label="Search">
                     <button class="btn-solid theme-primary" type="submit">Buscar</button>
                 </form>
@@ -81,11 +81,14 @@
                                 <td><?= $articulo['precio'] ?></td>
                                 <!-- Botones de acción -->
                                 <td>
-                                    <a href="edit.php?indice=<?= $indice ?>" class="text-primary me-2" title="Editar">
+                                    <a href="edit.php?indice=<?= $indice ?>" class="btn-solid theme-info" title="Editar">
                                         <i class="bi bi-pencil-fill"></i>
                                     </a>
-                                    <a href="delete.php?indice=<?= $indice ?>" class="text-primary" title="Eliminar" onclick="return confirm('¿Estás seguro de eliminar este artículo?');">
+                                    <a href="delete.php?indice=<?= $indice ?>" class="btn-solid theme-danger" title="Eliminar" onclick="return confirm('¿Estás seguro de eliminar este artículo?');">
                                         <i class="bi bi-trash3"></i>
+                                    </a>
+                                    <a href="show.php?indice=<?= $indice ?>" class="btn-solid theme-warning" title="Mostrar">
+                                        <i class="bi bi-eye"></i>
                                     </a>
                                 </td>
                             </tr>
