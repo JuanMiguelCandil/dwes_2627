@@ -73,12 +73,12 @@
                     <tbody>
                         <?php foreach ($articulos as $indice => $articulo): ?>
                             <tr>
-                                <th scope="row"><?= $articulo['id'] ?></th>
+                                <th scope="row" class="text-end"><?= $articulo['id'] ?></th>
                                 <td><?= $articulo['descripcion'] ?></td>
                                 <td><?= $articulo['modelo'] ?></td>
                                 <td><?= $articulo['categoria'] ?></td>
-                                <td><?= $articulo['unidades'] ?></td>
-                                <td><?= $articulo['precio'] ?></td>
+                                <td class="text-end"><?= $articulo['unidades'] ?></td>
+                                <td class="text-end"><?= $articulo['precio'] ?> €</td>
                                 <!-- Botones de acción -->
                                 <td>
                                     <a href="edit.php?indice=<?= $indice ?>" class="btn-solid theme-info" title="Editar">
