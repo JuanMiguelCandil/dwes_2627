@@ -1,0 +1,22 @@
+<?php
+class Coche
+{
+    public int $velocidad;
+
+    public function __construct()
+    {
+        $this->velocidad = 0;
+    }
+    public function aumentarVelocidad(): void
+    {
+        $this->velocidad++;
+    }
+    public function parar(): void
+    {
+        $this->velocidad = 0;
+    }
+}
+$coche = new Coche();
+$coche->velocidad = 1000; // velocidad = 1000 (¡sin control!)
+
+echo $coche->velocidad;
