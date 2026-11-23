@@ -55,7 +55,7 @@
 
                     <div class="mb-3">
                         <label for="curso" class="form-label">Curso</label>
-                        <select class="form-select" id="curso" name="curso" required>
+                        <select class="form-control combobox-toggle" id="curso" name="curso" required>
                             <option value="">-- Seleccionar curso --</option>
                             <?php foreach ($cursos as $idx => $nombreCurso): ?>
                                 <option value="<?= $idx ?>"><?= htmlspecialchars($nombreCurso) ?></option>

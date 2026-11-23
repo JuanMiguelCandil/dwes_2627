@@ -55,7 +55,7 @@
 
                     <div class="mb-3">
                         <label for="curso" class="form-label">Curso</label>
-                        <select class="form-select" id="curso" name="curso" required>
+                        <select class="form-control combobox-toggle" id="curso" name="curso" required>
                             <option value="">-- Seleccionar curso --</option>
                             <?php foreach ($cursos as $indice => $nombreCurso): ?>
                                 <option value="<?= $indice ?>" <?= ($alumno->curso === $indice) ? 'selected' : '' ?>>
@@ -87,7 +87,7 @@
 
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <a class="btn-solid theme-danger" href="index.php" role="button">Cancelar</a>
-                        <button type="submit" class="btn-solid theme-primary">Editar Alumno</button>
+                        <button type="submit" class="btn-solid theme-primary">Actualizar Alumno</button>
                     </div>
                 </form>
             </div>
